@@ -15,16 +15,16 @@ node {
     }
 
     stage('Email Notification'){
-		mail bcc: '', 
-	        body: """Hi Team, 
-		You build successfully deployed
-		
-		Job URL : ${env.JOB_URL}
-		Job Name: ${env.JOB_NAME}
+	mail bcc: '', 
+	body: """Hi Team, 
+Your build successfully deployed
+	
+Job URL : ${env.JOB_URL}
+Job Name: ${env.JOB_NAME}
 
-                Thanks,
-                DevOps Team""", 
-		cc: 'sbapatla@gmail.com', from: '', replyTo: 'satya.b@hotmail.com', subject: "${env.JOB_NAME} Success", 
+Thanks,
+DevOps Team""", 
+		cc: 'sba@gmail.com', from: '', replyTo: 'sa.b@hotmail.com', subject: "${env.JOB_NAME} Success", 
 		to: 'swarupa.yesireddy@gmail.com'
    
    }
