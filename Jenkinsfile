@@ -16,11 +16,14 @@ node {
 
     stage('Email Notification'){
 	mail bcc: '', 
-	body: """Hi Team, 
-Your build successfully deployed
+	body: """Hi Team,
+	Your build number ${env.BUILD_NUMBER} successfully completed. 
+	Your job URL is ${env.JOB_URL}
+	Your job name is ${env.JOB_NAME}
 	
-Job URL : ${env.JOB_URL}
-Job Name: ${env.JOB_NAME}
+	Git commit id for this change : ${env.GIT_COMMIT}
+	Git branch : ${env.GIT_BRANCH}
+	This job ran on node : ${NODE_NAME}
 
 Thanks,
 DevOps Team""", 
