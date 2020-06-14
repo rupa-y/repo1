@@ -21,8 +21,8 @@ node {
 	Your job URL is ${env.JOB_URL}
 	Your job name is ${env.JOB_NAME}
 	
-	Git commit id for this change : ${env.GIT_COMMIT}
-	Git branch : ${env.GIT_BRANCH}
+	Git commit id for this change : ${GIT_COMMIT}
+	Git branch : ${GIT_BRANCH}
 	This job ran on node : ${NODE_NAME}
 
 Thanks,
