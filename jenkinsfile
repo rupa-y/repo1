@@ -6,5 +6,7 @@ node {
         sh 'chmod +x script.sh'
         sh 'sh script.sh'
     }
-    stage('notify by email')
+    stage('notify by email'){
+    emailext body: 'build pass', subject: 'build is good', to: 'swarupa.yesireddy@gmail.com'
+    }   
 }
